@@ -2,7 +2,7 @@ services:
   - type: web
     name: anythingllm-web
     env: docker
-    repo: https://github.com/YOUR_USERNAME/anything-llm
+    repo: https://github.com/bhilliardga/anything-llm
     dockerfilePath: ./Dockerfile
     plan: free
     autoDeploy: true
@@ -10,8 +10,8 @@ services:
   - type: worker
     name: anythingllm-collector
     env: docker
-    repo: https://github.com/YOUR_USERNAME/anything-llm
+    repo: https://github.com/bhilliardga/anything-llm
     dockerfilePath: ./Dockerfile
     plan: free
     autoDeploy: true
-    command: npm run collector
+    startCommand: npm run collector
