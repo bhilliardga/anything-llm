@@ -8,11 +8,13 @@ const {
 const { tokenizeString } = require("../../utils/tokenizer");
 const { default: slugify } = require("slugify");
 
-async function asOfficeMime({
-  fullFilePath = "",
-  filename = "",
-  options = {},
-}) {
+async function asOfficeMime(params = {}) {
+  const {
+    fullFilePath = "",
+    filename = "",
+    options = {},
+  } = params;
+
   console.log(`-- Working ${filename} --`);
   let content = "";
   try {
